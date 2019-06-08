@@ -1,0 +1,34 @@
+What is React Native?
+"Learn once, write everywhere"
+- Writes in Swift and Android
+- Build real mobile apps by using JavaScript and React (Native)
+What a React Native App is and is Not
+ - not building a web app running on mobile phone
+ - not building web app hosted by WebView in Native App (e.g. Ionic)
+ - is building JS + React Native App, Complied to Native Code
+    - All UI is complied to Native code
+    - not styling with CSS is not supported
+    - not typical HTML because it is not supported
+    - React Native doesn't work with the normal DOM and CSS
+    - It doesn't even work with the same JavaScript that supports the browser
+    - All of that is given to you by React Native
+    - instead of DOM, h1 you can use components
+
+Build out workout app
+- similar to strong lift
+- Built with React Native app
+- one code base
+- What we will use
+    1. 5x5 Workout App - modeling it after StrongLift
+        - keep track of workout
+        - keep history of workout
+    2. React Native Web
+        - at the end a website, iOS, and Android app
+    3. Mobx - for state management
+    4. Typescript - as a programming language
+    5. React Navigation - to change pages in the app and the website
+    6. React Hooks for the entire thing
+    7. Async - will using all frontend for this so we will be using Async Storage
+        or Local Storage on the phone that way can persistent the workout data as
+        the user uses the app or uses the website and doesn't lose it after they come
+        back to it
