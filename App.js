@@ -103,25 +103,60 @@ import { Text, View, AppRegistry, Image, StyleSheet } from 'react-native';
 // learn_style.js
 // Style is a prop
 // all core components accept the prop Style
-const styles = StyleSheet.create({
-    bigBlue: {
-        color: 'blue',
-        fontWeight: 'bold',
-        fontSize: 30,
-    },
-    red: {
-        color: 'red',
-    },
-});
+// const styles = StyleSheet.create({
+//     bigBlue: {
+//         color: 'blue',
+//         fontWeight: 'bold',
+//         fontSize: 30,
+//     },
+//     red: {
+//         color: 'red',
+//     },
+// });
+//
+// export default class LotsOfStyles extends Component {
+//     render() {
+//         return (
+//             <View>
+//                 <Text style={styles.red}>just red</Text>
+//                 <Text style={styles.bigBlue}>just bigBlue</Text>
+//                 <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+//                 <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+//             </View>
+//         );
+//     }
+// }
 
-export default class LotsOfStyles extends Component {
+// learn height_and_width
+// It is common to set dimensions this way because it should be the same size
+// no matter the screen dimensions
+
+// Fixed Dimensions
+// export default class FixedDimensionsBasics extends Component {
+//     render() {
+//         return (
+//             <View>
+//                 <View style={{width: 150, height: 150, backgroundColor: 'powderblue'}} />
+//                 <View style={{width: 200, height: 200, backgroundColor: 'skyblue'}} />
+//                 <View style={{width: 250, height: 250, backgroundColor: 'steelblue'}} />
+//             </View>
+//         )
+//     }
+// }
+
+// Flex Dimensions
+// flex expands or shrinks based on available space
+// flex: 1 - fill all available space
+export default class FlexDimensionsBasics extends Component {
     render() {
         return (
-            <View>
-                <Text style={styles.red}>just red</Text>
-                <Text style={styles.bigBlue}>just bigBlue</Text>
-                <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
-                <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
+            // Try removing the `flex: 1` on the parent View.
+            // The parent will not have dimensions, so the children can't expand.
+            // What if you add `height: 300` instead of `flex: 1`?
+            <View style={{flex: 1}}>
+                <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+                <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+                <View style={{flex: 3, backgroundColor: 'steelblue'}} />
             </View>
         );
     }
