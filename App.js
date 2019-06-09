@@ -1,6 +1,6 @@
 // learn_components.js
 import React, { Component } from 'react';
-import { Text, View, AppRegistry, Image, StyleSheet } from 'react-native';
+import { Text, View, AppRegistry, Image, StyleSheet, TextInput} from 'react-native';
 
 // // Using ES6
 // // Anything you see on the screen is some sort of component
@@ -198,22 +198,45 @@ import { Text, View, AppRegistry, Image, StyleSheet } from 'react-native';
 // };
 
 // align items - aligns the children along the secondary axis
-export default class AlignItemsBasics extends Component {
+// export default class AlignItemsBasics extends Component {
+//     render() {
+//         return (
+//             // Try setting `alignItems` to 'flex-start'
+//             // Try setting `justifyContent` to `flex-end`.
+//             // Try setting `flexDirection` to `row`.
+//             <View style={{
+//                 flex: 1,
+//                 flexDirection: 'column',
+//                 justifyContent: 'center',
+//                 alignItems: 'stretch',
+//             }}>
+//                 <View style={{width: 100, height: 100, backgroundColor: 'powderblue'}} />
+//                 <View style={{height: 100, backgroundColor: 'skyblue'}} />
+//                 <View style={{height: 200, backgroundColor: 'steelblue'}} />
+//             </View>
+//         );
+//     }
+// };
+
+// handling_text_input - translate input text into pizza slices
+export default class PizzaTranslator extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {text: ''};
+    }
+
     render() {
         return (
-            // Try setting `alignItems` to 'flex-start'
-            // Try setting `justifyContent` to `flex-end`.
-            // Try setting `flexDirection` to `row`.
-            <View style={{
-                flex: 1,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'stretch',
-            }}>
-                <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-                <View style={{height: 50, backgroundColor: 'skyblue'}} />
-                <View style={{height: 100, backgroundColor: 'steelblue'}} />
+            <View style={{padding: 10}}>
+                <TextInput
+                    style={{height: 40}}
+                    placeholder="Type here to translate!"
+                    onChangeText={(text) => this.setState({text})}
+                />
+                <Text style={{padding: 10, fontSize: 42}}>
+                    {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+                </Text>
             </View>
         );
     }
-};
+}
