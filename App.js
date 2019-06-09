@@ -1,6 +1,6 @@
 // learn_components.js
 import React, { Component } from 'react';
-import { Text, View, AppRegistry, Image } from 'react-native';
+import { Text, View, AppRegistry, Image, StyleSheet } from 'react-native';
 
 // // Using ES6
 // // Anything you see on the screen is some sort of component
@@ -61,40 +61,67 @@ import { Text, View, AppRegistry, Image } from 'react-native';
 // }
 
 // learn_state.js
-class Blink extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { isShowingText: true},
+// class Blink extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = { isShowingText: true},
+//
+//         // Toggle the state every second
+//         setInterval(() => (
+//             this.setState(previousState => (
+//                 { isShowingText: !previousState.isShowingText }
+//             ))
+//
+//         ), 1000);
+//     }
+//
+//     render() {
+//         if (!this.state.isShowingText) {
+//             return null;
+//         }
+//
+//         return (
+//             <Text>{this.props.text}</Text>
+//         );
+//     }
+// }
+//
+// // The text is a prop
+// export default class BlinkApp extends Component {
+//     render() {
+//         return (
+//             <View>
+//                 <Blink text='I love to blink' />
+//                 <Blink text='Yes blinking is so great' />
+//                 <Blink text='Why did they ever tak this out of HTML' />
+//                 <Blink text='Look at me look at me look at me' />
+//             </View>
+//         );
+//     }
+// }
 
-        // Toggle the state every second
-        setInterval(() => (
-            this.setState(previousState => (
-                { isShowingText: !previousState.isShowingText }
-            ))
+// learn_style.js
+// Style is a prop
+// all core components accept the prop Style
+const styles = StyleSheet.create({
+    bigBlue: {
+        color: 'blue',
+        fontWeight: 'bold',
+        fontSize: 30,
+    },
+    red: {
+        color: 'red',
+    },
+});
 
-        ), 1000);
-    }
-
-    render() {
-        if (!this.state.isShowingText) {
-            return null;
-        }
-
-        return (
-            <Text>{this.props.text}</Text>
-        );
-    }
-}
-
-// The text is a prop
-export default class BlinkApp extends Component {
+export default class LotsOfStyles extends Component {
     render() {
         return (
             <View>
-                <Blink text='I love to blink' />
-                <Blink text='Yes blinking is so great' />
-                <Blink text='Why did they ever tak this out of HTML' />
-                <Blink text='Look at me look at me look at me' />
+                <Text style={styles.red}>just red</Text>
+                <Text style={styles.bigBlue}>just bigBlue</Text>
+                <Text style={[styles.bigBlue, styles.red]}>bigBlue, then red</Text>
+                <Text style={[styles.red, styles.bigBlue]}>red, then bigBlue</Text>
             </View>
         );
     }
