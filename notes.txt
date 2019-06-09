@@ -32,3 +32,8 @@ Build out workout app
         or Local Storage on the phone that way can persistent the workout data as
         the user uses the app or uses the website and doesn't lose it after they come
         back to it
+
+Notes from Tutorial Docs:
+- HTML --> React
+- some text --> <Text>
+- <div> or <span> --> <View> 
