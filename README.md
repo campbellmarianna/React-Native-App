@@ -9,7 +9,7 @@ Learning the fundamentals of React Native by building out it's features
 [x]Style
 [x]Height and Width
 [x]Layout with Flexbox
-[ ]Handling Text Input
+[x]Handling Text Input
 [ ]Handling Touches
 [ ]Using a ScrollView
 [ ]Using List Views

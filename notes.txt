@@ -40,3 +40,4 @@ Notes from Tutorial Docs:
 
 # Future goals:
 # implement every layout prop - https://facebook.github.io/react-native/docs/0.59/layout-props
+# learn about and implement every touchable - https://facebook.github.io/react-native/docs/0.59/handling-touches
