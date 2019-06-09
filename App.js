@@ -147,17 +147,73 @@ import { Text, View, AppRegistry, Image, StyleSheet } from 'react-native';
 // Flex Dimensions
 // flex expands or shrinks based on available space
 // flex: 1 - fill all available space
-export default class FlexDimensionsBasics extends Component {
+// export default class FlexDimensionsBasics extends Component {
+//     render() {
+//         return (
+//             // Try removing the `flex: 1` on the parent View.
+//             // The parent will not have dimensions, so the children can't expand.
+//             // What if you add `height: 300` instead of `flex: 1`?
+//             <View style={{flex: 1}}>
+//                 <View style={{flex: 1, backgroundColor: 'powderblue'}} />
+//                 <View style={{flex: 2, backgroundColor: 'skyblue'}} />
+//                 <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+//             </View>
+//         );
+//     }
+// }
+
+
+//learn_layout_with_flexbox.js
+// flexDirection - default is column instead od row
+// export default class FlexDirectionBasics extends Component {
+//     render() {
+//         return (
+//             // Try setting `flexDirection` to `column`.
+//             <View style={{flex: 1, flexDirection: 'row'}}>
+//                 <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//                 <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//                 <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//             </View>
+//         );
+//     }
+// };
+
+// justify content - determines where the children are positioned on the primary axis
+// export default class JustifyContentBasics extends Component {
+//     render() {
+//         return (
+//             // Try setting `justifyContent` to `center`.
+//             // Try setting `flexDirection` to `row`.
+//             <View style={{
+//                 flex: 1,
+//                 flexDirection: 'column',
+//                 justifyContent: 'space-between',
+//             }}>
+//                 <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//                 <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+//                 <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+//             </View>
+//         );
+//     }
+// };
+
+// align items - aligns the children along the secondary axis
+export default class AlignItemsBasics extends Component {
     render() {
         return (
-            // Try removing the `flex: 1` on the parent View.
-            // The parent will not have dimensions, so the children can't expand.
-            // What if you add `height: 300` instead of `flex: 1`?
-            <View style={{flex: 1}}>
-                <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-                <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-                <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+            // Try setting `alignItems` to 'flex-start'
+            // Try setting `justifyContent` to `flex-end`.
+            // Try setting `flexDirection` to `row`.
+            <View style={{
+                flex: 1,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'stretch',
+            }}>
+                <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+                <View style={{height: 50, backgroundColor: 'skyblue'}} />
+                <View style={{height: 100, backgroundColor: 'steelblue'}} />
             </View>
         );
     }
-}
+};

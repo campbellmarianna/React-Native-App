@@ -36,4 +36,7 @@ Build out workout app
 Notes from Tutorial Docs:
 - HTML --> React
 - some text --> <Text>
-- <div> or <span> --> <View> 
+- <div> or <span> --> <View>
+
+# Future goals:
+# implement every layout prop - https://facebook.github.io/react-native/docs/0.59/layout-props
