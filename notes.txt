@@ -43,3 +43,20 @@ Notes from Tutorial Docs:
 # learn about and implement every touchable - https://facebook.github.io/react-native/docs/0.59/handling-touches
 # learn and implement pagingEnabled props, ViewPagerAndroid component, maximumZoomScale, minimumZoomScale props
     Reference: https://facebook.github.io/react-native/docs/0.59/using-a-scrollview
+
+android - ship
+1. Use google play signing
+2. create keys for the app
+3. if you lose your keys, no one is able to reuse the package name including you
+4. use play store signing - generate key give it to google when forget your key,
+you send an update they swop out old app for new one
+
+Analytics
+- Event to analytics data
+    - has a set of user property
+    - it is about what you define is an event
+    - some important events
+        - payloads
+        - how they navigate when they login
+        - custom events
+            - goes to custom support
